@@ -1,0 +1,54 @@
+{
+  "name": "dockernewman",
+  "version": "1.0.0",
+  "description": "Run Newman/Postman with reporters",
+  "main": "index.js",
+  "scripts": {
+    "help": "runpostman --help",
+    "clean": "rm -rf node_modules",
+    "pre-publish": "npm pack",
+    "installStuff": "npm install --legacy-peer-deps",
+    "run-postman": "npm run bin/runpostman.js"
+  },
+  "bin": "bin/runpostman.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurahannah/dockernewman.git"
+  },
+  "keywords": [
+    "newman",
+    "postman"
+  ],
+  "author": "Laura Vachon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurahannah/dockernewman/issues"
+  },
+  "homepage": "https://github.com/laurahannah/dockernewman#readme",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "chmodr": "^1.2.0",
+    "commander": "^8.3.0",
+    "filesize": "^8.0.7",
+    "fs": "^0.0.1-security",
+    "gulp-header": "^2.0.9",
+    "handlebars": "^4.7.7",
+    "handlebars-helper": "^0.0.12",
+    "har-validator": "^5.1.5",
+    "helper-moment": "^0.2.0",
+    "highlight.js": "^11.4.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.5",
+    "newman": ">=5.3.1",
+    "newman-reporter-csv": "^1.2.0",
+    "newman-reporter-json": "^1.0.0",
+    "optimist": "^0.5.2",
+    "pretty-ms": "^7.0.1"
+  },
+  "engines": {
+    "node": ">=17"
+  },
+  "peerDependencies": {
+    "newman": ">=4"
+  }
+}

@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "002d554d-6e21-415a-bf58-d8db1f45fa50",
+		"name": "RestExample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.be.success;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{jsonPlaceHolderUrl}}/users",
+					"host": [
+						"{{jsonPlaceHolderUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const title = pm.collectionVariables.get('title');",
+							"const body = pm.collectionVariables.get('body');",
+							"const userid = pm.collectionVariables.get('userId');",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.be.success;",
+							"});",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.title).to.eql(title);",
+							"    pm.expect(jsonData.body).to.eql(body);",
+							"    pm.expect(jsonData.userId).to.eql(userid);",
+							"    pm.expect(jsonData.id).to.be.not.NaN;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"{{title}}\",\n    \"body\": \"{{body}}\",\n    \"userId\": \"{{userId}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jsonPlaceHolderUrl}}/posts",
+					"host": [
+						"{{jsonPlaceHolderUrl}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.collectionVariables.set('title', data.title || pm.variables.replaceIn('{{$randomProductName}}'));",
+					"pm.collectionVariables.set('body', data.body || pm.variables.replaceIn('{{$randomBs}}'));",
+					"pm.collectionVariables.set('userId', data.userId || pm.variables.replaceIn('{{$randomUserName}}'));"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "title",
+			"value": ""
+		},
+		{
+			"key": "body",
+			"value": ""
+		},
+		{
+			"key": "userId",
+			"value": ""
+		}
+	]
+}
