@@ -15,9 +15,8 @@ runpostman
         '---Finish this with the json multiconfig format---')
     .parse(process.argv);
 
-collectionDescriptorJson => {
-    console.info('Hello');
-    runPostmanWithReporters(runpostman.keyDescriptor);
-}
+console.log(runpostman.keyDescriptor);
+runPostmanWithReporters(runpostman.keyDescriptor);
+
 module.exports = exports = runpostman;
 
