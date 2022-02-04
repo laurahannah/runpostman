@@ -21,6 +21,10 @@ have defaults that seemed reasonable at the time of writing. If no report file n
 is specified, it will default to the collection name with the fitting extension type
 for the report.
 
+note: at the time of this writing, the error checking on the json configuration is not
+terribly robust. The script will error out if the format is incorrect. This is an area
+for development.
+
 ### available options and default values
 
 ```
@@ -64,6 +68,33 @@ There is an example postman collection in the samples directory.
 }
 ```
 
+## Console output
+The console is being written to for each request issued. This can be removed 
+or perhaps toggled with an option
+```
+Lauras-iMac:laura$ node bin/runpostman.js -k multiconfig.json
+Running 2 request(s) and 1 iteration(s)
+Running 2 request(s) and 1 iteration(s)
+GET https://jsonplaceholder.typicode.com/users
+POST https://jsonplaceholder.typicode.com/posts
+CSV write complete!
+RestExample: collection run completed
+Success
+GET https://jsonplaceholder.typicode.com/users
+POST https://jsonplaceholder.typicode.com/posts
+CSV write complete!
+RestExampleWithData: collection run completed
+Success
+```
+
+## Report files
+The report files are will be written to ./newman-reports
+e.g.
+```
+- newman-reports
+    - RestExample.csv
+    - RestExampleWithData.csv
+```
 
 ## Newman GitHubRepo
 ```
