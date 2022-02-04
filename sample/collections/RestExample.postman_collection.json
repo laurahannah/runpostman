@@ -50,7 +50,7 @@
 							"    pm.response.to.be.success;",
 							"});",
 							"",
-							"pm.test(\"Your test name\", function () {",
+							"pm.test(\"Validate response content\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.title).to.eql(title);",
 							"    pm.expect(jsonData.body).to.eql(body);",
