@@ -1,9 +1,11 @@
-[
-  {
-    "reportFileName": "Postman Report",
-    "collection": "collections/RestExample.postman_collection.json",
-    "environment": "environments/RestExample.postman_environment.json",
-    "iterationCount": "all",
-    "delayRequest": 500
-  }
-]
+{
+  "collections": [
+    {
+      "reportFileName": "RestExample",
+      "collection": "collections/RestExample.postman_collection.json",
+      "environment": "environments/RestExample.postman_environment.json",
+      "iterationCount": "all",
+      "delayRequest": 500
+    }
+  ]
+}
