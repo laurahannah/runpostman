@@ -1,3 +1,5 @@
+# report directory
+**/newman-reports/
 # Logs
 logs
 *.log
