@@ -105,6 +105,13 @@ e.g.
     - RestExampleWithData.csv
 ```
 
+### Sample csv report
+```text
+iteration,collectionName,requestName,method,url,status,code,responseTime,responseSize,executed,failed,skipped,body
+"1","RestExample","users","GET","https://jsonplaceholder.typicode.com/users","OK","200","162","5645","Status code is 200"
+"1","RestExample","posts","POST","https://jsonplaceholder.typicode.com/posts","Created","201","89","130","Status code is 200, Validate response content"
+```
+
 ## Newman GitHubRepo
 ```
 https://github.com/postmanlabs/newman
