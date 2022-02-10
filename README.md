@@ -68,6 +68,15 @@ There is an example postman collection in the samples directory.
 }
 ```
 
+## Suggested project structure
+- root dir
+  - newmandir/
+    - collections/
+    - datafiles/
+    - enviornments/
+    - newman-reports/
+    - jsonconfig.json
+
 ## Console output
 The console is being written to for each request issued. This can be removed 
 or perhaps toggled with an option
@@ -94,6 +103,13 @@ e.g.
 - newman-reports
     - RestExample.csv
     - RestExampleWithData.csv
+```
+
+### Sample csv report
+```text
+iteration,collectionName,requestName,method,url,status,code,responseTime,responseSize,executed,failed,skipped,body
+"1","RestExample","users","GET","https://jsonplaceholder.typicode.com/users","OK","200","162","5645","Status code is 200"
+"1","RestExample","posts","POST","https://jsonplaceholder.typicode.com/posts","Created","201","89","130","Status code is 200, Validate response content"
 ```
 
 ## Newman GitHubRepo
