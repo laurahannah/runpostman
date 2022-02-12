@@ -1,4 +1,4 @@
-# runpostman
+# index.js
 This is a script put together that reads a json file and runs multiple postman collections
 with the given parameters as options. Currently this script has only a csv reporter, 
 which is handy because it can be imported into a database and manipulated from there
@@ -81,7 +81,7 @@ There is an example postman collection in the samples directory.
 The console is being written to for each request issued. This can be removed 
 or perhaps toggled with an option
 ```
-Lauras-iMac:laura$ node bin/runpostman.js -k multiconfig.json
+Lauras-iMac:laura$ node bin/index.js -k multiconfig.json
 Running 2 request(s) and 1 iteration(s)
 Running 2 request(s) and 1 iteration(s)
 GET https://jsonplaceholder.typicode.com/users
