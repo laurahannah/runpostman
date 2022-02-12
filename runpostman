@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-const { Command } = require('commander');
-const program = new Command();
-const version = require('../package.json').version;
-const runPostmanWithReporters = require('../lib/index.js');
+const commander = require('commander'); // (normal include)
+// const commander = require('./index.js'); // include commander in git clone of commander repo
+const program = new commander.Command();
+const version = require('./package.json').version;
 
 program
-    .name('runpostman')
+    .name('index.js')
     .description('Run postman collection(s) with the specified options')
     .version(version, '-f, --version')
     .addHelpCommand(true)
@@ -23,15 +23,10 @@ program
         '\t\t"reportFile"\t:\t"sampleRestWithData"\n' +
         '\t\t"reportTitle"\t:\t"Sample Rest Collection"\n' +
         '\t\t}\n' +
-        '\t]}\n')
-    .parse();
+        '\t]}\n');
 
+program.parse(process.argv);
 const options = program.opts();
-
-// runPostmanWithReporters(runpostman.keyDescriptor);
-
-//Run this script if this is a direct stdin.
-!module.parent && runPostmanWithReporters(options.keyDescriptor);
 
 module.exports = exports = program;
 
