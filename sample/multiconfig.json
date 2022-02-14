@@ -2,16 +2,16 @@
   "collections": [
     {
       "reportFileName": "RestExample",
-      "collection": "collections/RestExample.postman_collection.json",
-      "environment": "environments/RestExample.postman_environment.json",
+      "collection": "sample/collections/RestExample.postman_collection.json",
+      "environment": "sample/environments/RestExample.postman_environment.json",
       "iterationCount": "all",
       "includeBody": false
     },
     {
       "reportFileName": "RestExampleWithData",
-      "collection": "collections/RestExample.postman_collection.json",
-      "environment": "environments/RestExample.postman_environment.json",
-      "datafile": "datafiles/datafile.csv",
+      "collection": "sample/collections/RestExample.postman_collection.json",
+      "environment": "sample/environments/RestExample.postman_environment.json",
+      "datafile": "sample/datafiles/datafile.csv",
       "iterationCount": "all",
       "delayRequest": 500,
       "includeBody": true

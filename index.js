@@ -3,7 +3,7 @@
 const newman = require('newman'),
     chmodr = require('chmodr'),
     fs = require('fs'),
-    basedir = './sample/';
+    basedir = './';
 
 // get the current timestamp
 const moment = require('moment');
