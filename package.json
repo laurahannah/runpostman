@@ -1,19 +1,19 @@
 {
-  "name": "dockernewman",
-  "version": "0.0.1",
+  "name": "runpostman",
+  "version": "0.0.2",
   "description": "Run Newman/Postman with reporters",
   "main": "index.js",
   "scripts": {
-    "help": "runpostman --help",
+    "help": "index.js --help",
     "clean": "rm -rf node_modules",
     "pre-publish": "npm pack",
     "installStuff": "npm install --legacy-peer-deps",
-    "run-postman": "npm run bin/runpostman.js"
+    "run-postman": "node runpostman"
   },
-  "bin": "bin/runpostman.js",
+  "bin": "runpostman",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurahannah/dockernewman.git"
+    "url": "git+https://github.com/laurahannah/runpostman.git"
   },
   "keywords": [
     "newman",
@@ -22,9 +22,9 @@
   "author": "Laura Vachon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/laurahannah/dockernewman/issues"
+    "url": "https://github.com/laurahannah/runpostman/issues"
   },
-  "homepage": "https://github.com/laurahannah/dockernewman#readme",
+  "homepage": "https://github.com/laurahannah/runpostman#readme",
   "dependencies": {
     "atob": "^2.1.2",
     "chmodr": "^1.2.0",
